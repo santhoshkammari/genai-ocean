@@ -1,11 +1,11 @@
-# 100 Essential Python Features: Names and Explanations
+~~# 100 Essential Python Features: Names and Explanations
 
 | # | Feature | Explanation | Code Example                                                                      | Use Case | Importance(1-5)|
 |---|---------|-------------|-----------------------------------------------------------------------------------|---------|--------------|
 | 1 | functools.lru_cache | Decorator that memoizes a function's return values | ```python @lru_cache(maxsize=100) def fib(n): if n < 2: return fib(n-1) + fib(n-2)```| primarily used for optimizing recursive functions or functions with expensive computations that are called repeatedly with the same arguments | 5 |
 | 2 | collections.defaultdict | Dictionary subclass that calls a factory function for missing keys | ```python from collections import defaultdict d = defaultdict(list) d['a'].append(1)  # No KeyError ``` | Simplifying handling of missing dictionary keys | 4 |
 | 3 | contextlib.contextmanager | Decorator for creating context managers | ```python @contextmanager def file_manager(filename, mode): f = open(filename, mode) yield f f.close() ``` | Resource management (e.g., file handling) | 4 |
-| 4 | itertools.cycle | Creates an infinite iterator | ```pythonfrom itertools import cyclecolors = cycle(['red', 'green', 'blue'])next(colors)  # 'red', then 'green', then 'blue', then 'red' again...``` | Creating repeating sequences | 3 |
+|~~ 4 | itertools.cycle | Creates an infinite iterator | ```pythonfrom itertools import cyclecolors = cycle(['red', 'green', 'blue'])next(colors)  # 'red', then 'green', then 'blue', then 'red' again...``` | Creating repeating sequences | 3 |
 | 5 | functools.partial | Creates a new function with pre-filled arguments | ```pythonfrom functools import partialbasetwo = partial(int, base=2)basetwo('10010')  # Returns 18``` | Creating specialized versions of functions | 4 |
 | 6 | typing.Optional | Indicates that a value can be of a specified type or None | ```pythondef greet(name: Optional[str] = None):    print(f"Hello, {name or 'stranger'}!")``` | Improving type hinting and code readability | 4 |
 | 7 | collections.Counter | Dict subclass for counting hashable objects | ```pythonfrom collections import Counterc = Counter('hello world')print(c)  # Counter({'l': 3, 'o': 2, ...})``` | Counting occurrences of items in an iterable | 4 |
